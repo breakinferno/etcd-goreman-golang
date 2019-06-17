@@ -10,7 +10,6 @@ RUN yum -y update && yum clean all && \
     yum clean all
 ENV GOPATH /go
 ENV PATH="/go/bin:${PATH}"
-RUN go get github.com/mattn/goreman
 
 ADD etcd/etcd /app/bin
 ADD etcd/etcdctl /app/bin
