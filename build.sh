@@ -16,7 +16,7 @@ echo $GOREMAN_LATEST_VERSION
 ETCD_DIR="etcd"
 GOREMAN_DIR="goreman"
 
-if [ "$1" -ne "--build" ]; then
+if [ "$1" != "--build" ]; then
     rm -rf $ETCD_DIR
     rm -rf $GOREMAN_DIR
 
@@ -33,4 +33,4 @@ if [ "$1" -ne "--build" ]; then
     fi
 fi
 
-docker build -t "etcd-goreman-golang":"$ETCD_LATEST_VERSION"
+docker build -t "etcd-goreman-golang":"$ETCD_LATEST_VERSION" .
